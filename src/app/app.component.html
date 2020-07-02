@@ -1,56 +1,65 @@
-
 <div class="main-area">
-  <div class="container full-height position-static">
+    <div class="container full-height position-static">
 
-    <section class="left-section full-height">
+        <section class="left-section full-height">
 
-      <a class="logo" href="#"><img src="assets/images/janev-logo.png" alt="Logo"></a>
- 
-      <div class="display-table">
-        <div class="display-table-cell">
-          <div class="main-content">
-            <h1 class="title"><b>Under Construction</b></h1>
-            <p>No website yet? Don't despair, just come back in <b style="font-weight: bold;">{{myDate}}</b> days.</p>
-            <div class="email-input-area">
-              <form method="post">
-                <input class="email-input" name="email" type="text" placeholder="Enter your email"/>
-                <button class="submit-btn" name="submit" type="submit"><b>NOTIFY US</b></button>
-              </form>
-            </div><!-- email-input-area -->
+            <a class="logo" href="#"><img src="assets/images/janev-logo2.svg" alt="Logo"></a>
 
-            <p class="post-desc">Sign up now to get early notification of the lauch date!</p>
-          </div><!-- main-content -->
-        </div><!-- display-table-cell -->
-      </div><!-- display-table -->
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <div class="main-content">
+                        <h1 class="title"><b>Under Construction</b></h1>
+                        <p>No website yet? Don't despair, just come back in <b style="font-weight: bold;">{{myDate}}</b> days.</p>
+                        <div class="email-input-area">
+                            <form method="post">
+                                <input class="email-input" name="email" type="text" placeholder="Enter your email" />
+                                <button class="submit-btn" name="submit" type="submit"><b>NOTIFY US</b></button>
+                            </form>
+                        </div>
+                        <!-- email-input-area -->
 
-      <ul class="footer-icons">
-        <li>Stay in touch : </li>
-        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-        <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-        <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
-      </ul>
+                        <p class="post-desc">Sign up now to get early notification of the lauch date!</p>
+                    </div>
+                    <!-- main-content -->
+                </div>
+                <!-- display-table-cell -->
+            </div>
+            <!-- display-table -->
 
-    </section><!-- left-section -->
+            <ul class="footer-icons">
+                <li>Stay in touch : </li>
+                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+            </ul>
 
-    <section class="right-section" style="background-image: url(assets/images/outlook.jpg)">
-    
+        </section>
+        <!-- left-section -->
 
-      <div class="display-table center-text">
-        <div class="display-table-cell">
+        <section class="right-section" style="background-image: url(assets/images/outlook.jpg)">
 
 
-          <div id="rounded-countdown">
-            <div class="countdown" [attr.data-remaining-sec]="toSec.seconds"></div>
-          </div>
+            <div class="display-table center-text">
+                <div class="display-table-cell">
 
-        </div><!-- display-table-cell -->
-      </div><!-- display-table -->
 
-    </section><!-- right-section -->
+                    <div id="rounded-countdown">
+                        <div class="countdown" [attr.data-remaining-sec]="toSec.seconds"></div>
+                    </div>
 
-  </div><!-- container -->
-</div><!-- main-area -->
+                </div>
+                <!-- display-table-cell -->
+            </div>
+            <!-- display-table -->
+
+        </section>
+        <!-- right-section -->
+
+    </div>
+    <!-- container -->
+</div>
+<!-- main-area -->
 
 <router-outlet></router-outlet>
