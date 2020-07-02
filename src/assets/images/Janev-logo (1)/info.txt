@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Lovelo Line Bold
+font link: https://www.fontfabric.com/lovelo-font/
+font author: Renzler Design
+font author site: http://www.braenda.com/
+Slogan Font: Aleo-Light.otf
+
+icon designer: Yu luck
+icon designer link: /yuluck
+        
+
+fontColor: {"hex":"#009DFF"}
+bgColor: {"hex":"transparent"}
+iconColor: {"hex":"#009DFF"}
+sloganColor: {"hex":"#000000"}
+      
