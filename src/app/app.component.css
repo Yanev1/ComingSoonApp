@@ -3947,17 +3947,39 @@ b.light-color {
     position: relative;
 }
 
+.dotted-line {
+    /* border: thin dotted black; */
+    z-index: -1000;
+    /* display: block; */
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+    /* width: 100%; */
+    /* only required for <img /> */
+    /* width: 250px;
+    height: 80px; */
+}
 
-/* .left-section .logo {
+.left-section .logo {
     position: absolute;
     top: 40px;
-    height: 30px;
+    height: 80px;
+    z-index: 1;
 }
 
 .left-section .logo img {
     height: 100%;
     width: auto;
-} */
+}
+
+.left-section .logo span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
 
 .left-section .main-content {
     padding: 40px 40px 40px 0;
