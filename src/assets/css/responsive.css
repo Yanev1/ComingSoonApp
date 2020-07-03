@@ -23,9 +23,17 @@
 	/* ---------------------------------
 	3. LEFT SECTION
 	--------------------------------- */
+	.dotted-line {
+		height: 40px;
+		width: 150px;
+	}
 
 	.left-section{ float: none; width: 100%; height: 50%; }
 	
+	.left-section .logo {
+		height: 40px;
+	}
+
 	.left-section .main-content{ padding: 40px 0; }
 	
 	.main-content .email-input-area{ width: 100%; }
