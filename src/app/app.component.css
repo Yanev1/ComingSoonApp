@@ -4077,9 +4077,9 @@ b.light-color {
     border-color: #3AA4F8;
 }
 
-.left-section .footer-icons>li>a>i[class*="google"] {
-    color: #F43846;
-    border-color: #F43846;
+.left-section .footer-icons>li>a>i[class*="linkedin"] {
+    color: #0077b5;
+    border-color: #0077b5;
 }
 
 .left-section .footer-icons>li>a>i[class*="instagram"] {
