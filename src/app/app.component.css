@@ -3947,7 +3947,8 @@ b.light-color {
     position: relative;
 }
 
-.left-section .logo {
+
+/* .left-section .logo {
     position: absolute;
     top: 40px;
     height: 30px;
@@ -3956,7 +3957,7 @@ b.light-color {
 .left-section .logo img {
     height: 100%;
     width: auto;
-}
+} */
 
 .left-section .main-content {
     padding: 40px 40px 40px 0;
