@@ -17,9 +17,10 @@
                         <h1 class="title"><b>Under Construction</b></h1>
                         <p>No website yet? Don't despair, just come back in <b style="font-weight: bold;">{{myDate}}</b> days.</p>
                         <div class="email-input-area">
-                            <form method="post">
-                                <input class="email-input" name="email" type="text" placeholder="Enter your email" />
-                                <button class="submit-btn" name="submit" type="submit"><b>NOTIFY US</b></button>
+                            <form #subscribeForm='ngForm' (ngSubmit)='subscribe(subscribeForm)'>
+                                <!-- <input class="email-input" name="email" type="text" placeholder="Enter your email" /> -->
+                                <input #email='ngModel' name='userName' class="email-input" name="EMAIL" type="text" placeholder="Enter your email" [(ngModel)]='subscribeData.email'/>
+                                <button class="submit-btn" name="submit" type="submit" data-toggle="modal" data-target="#myModal"><b>SUBMIT</b></button>
                             </form>
                         </div>
                         <!-- email-input-area -->
@@ -37,8 +38,6 @@
                 <li><a href="https://www.facebook.com/sashko.janev" target="_blank"><i class="ion-social-facebook"></i></a></li>
                 <li><a href="https://twitter.com/Yanev1" target="_blank"><i class="ion-social-twitter"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/sashko-janev/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-                <!-- <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-                <li><a href="#"><i class="ion-social-pinterest"></i></a></li> -->
             </ul>
 
         </section>
@@ -65,6 +64,30 @@
 
     </div>
     <!-- container -->
+    <!-- The Modal -->
+  <div class="modal" id="myModal" *ngIf="showMsg">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Success</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Thanks for subcribing!
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn-popup" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </div>
 <!-- main-area -->
 
