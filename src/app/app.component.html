@@ -1,90 +1,136 @@
 <div class="main-area">
-    <div class="container full-height position-static">
+  <div class="container full-height position-static">
+    <section class="left-section full-height">
+      <a class="logo" href="#">
+        <object
+          data="assets/images/janev-logo2.svg"
+          width="250"
+          height="80"
+          class="dotted-line"
+        >
+          <img src="assets/images/janev-logo.png" />
+          <!-- fallback with png image for browsers with NO SVG support -->
+        </object>
+        <span alt="Logo"></span>
+      </a>
 
-        <section class="left-section full-height">
-
-            <a class="logo" href="#">
-                <object data="assets/images/janev-logo2.svg" width="250" height="80" class="dotted-line">
-                <img src="assets/images/janev-logo.png" />
-                <!-- fallback with png image for browsers with NO SVG support -->
-            </object>
-                <span alt="Logo"></span>
-            </a>
-
-            <div class="display-table">
-                <div class="display-table-cell">
-                    <div class="main-content">
-                        <h1 class="title"><b>Under Construction</b></h1>
-                        <p>No website yet? Don't despair, just come back in <b style="font-weight: bold;">{{myDate}}</b> days.</p>
-                        <div class="email-input-area">
-                            <form #subscribeForm='ngForm' (ngSubmit)='subscribe(subscribeForm)'>
-                                <!-- <input class="email-input" name="email" type="text" placeholder="Enter your email" /> -->
-                                <input #email='ngModel' name='userName' class="email-input" name="EMAIL" type="text" placeholder="Enter your email" [(ngModel)]='subscribeData.email'/>
-                                <button class="submit-btn" name="submit" type="submit" data-toggle="modal" data-target="#myModal"><b>SUBMIT</b></button>
-                            </form>
-                        </div>
-                        <!-- email-input-area -->
-
-                        <p class="post-desc">Sign up now to get early notification of the lauch date!</p>
-                    </div>
-                    <!-- main-content -->
+      <div class="display-table">
+        <div class="display-table-cell">
+          <div class="main-content">
+            <h1 class="title"><b>Under Construction</b></h1>
+            <p>
+              No website yet? Don't despair, just come back in
+              <b style="font-weight: bold;">{{ myDate }}</b> days.
+            </p>
+            <div class="email-input-area">
+              <form
+                #subscribeForm="ngForm"
+                (ngSubmit)="subscribe(subscribeForm)"
+              >
+                <!-- <input class="email-input" name="email" type="text" placeholder="Enter your email" /> -->
+                <input
+                  #email="ngModel"
+                  name="userName"
+                  class="email-input"
+                  name="EMAIL"
+                  type="text"
+                  required
+                  placeholder="Enter your email"
+                  [(ngModel)]="subscribeData.email"
+                />
+                <div
+                  [hidden]="email.valid || email.pristine"
+                  class="alert alert-danger">
+                  Required field.
                 </div>
-                <!-- display-table-cell -->
+                <button
+                  class="submit-btn"
+                  name="submit"
+                  type="submit"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                >
+                  <b>SUBMIT</b>
+                </button>
+              </form>
             </div>
-            <!-- display-table -->
+            <!-- email-input-area -->
 
-            <ul class="footer-icons">
-                <li>Stay in touch : </li>
-                <li><a href="https://www.facebook.com/sashko.janev" target="_blank"><i class="ion-social-facebook"></i></a></li>
-                <li><a href="https://twitter.com/Yanev1" target="_blank"><i class="ion-social-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/sashko-janev/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-            </ul>
+            <p class="post-desc">
+              Sign up now to get early notification of the lauch date!
+            </p>
+          </div>
+          <!-- main-content -->
+        </div>
+        <!-- display-table-cell -->
+      </div>
+      <!-- display-table -->
 
-        </section>
-        <!-- left-section -->
+      <ul class="footer-icons">
+        <li>Stay in touch :</li>
+        <li>
+          <a href="https://www.facebook.com/sashko.janev" target="_blank"
+            ><i class="ion-social-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Yanev1" target="_blank"
+            ><i class="ion-social-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/sashko-janev/" target="_blank"
+            ><i class="ion-social-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </section>
+    <!-- left-section -->
 
-        <section class="right-section" style="background-image: url(assets/images/outlook.jpg)">
-
-
-            <div class="display-table center-text">
-                <div class="display-table-cell">
-
-
-                    <div id="rounded-countdown">
-                        <div class="countdown" [attr.data-remaining-sec]="toSec.seconds"></div>
-                    </div>
-
-                </div>
-                <!-- display-table-cell -->
-            </div>
-            <!-- display-table -->
-
-        </section>
-        <!-- right-section -->
-
-    </div>
-    <!-- container -->
-    <!-- The Modal -->
+    <section
+      class="right-section"
+      style="background-image: url(assets/images/outlook.jpg);"
+    >
+      <div class="display-table center-text">
+        <div class="display-table-cell">
+          <div id="rounded-countdown">
+            <div
+              class="countdown"
+              [attr.data-remaining-sec]="toSec.seconds"
+            ></div>
+          </div>
+        </div>
+        <!-- display-table-cell -->
+      </div>
+      <!-- display-table -->
+    </section>
+    <!-- right-section -->
+  </div>
+  <!-- container -->
+  <!-- The Modal -->
   <div class="modal" id="myModal" *ngIf="showMsg">
     <div class="modal-dialog">
       <div class="modal-content">
-      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Success</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
         </div>
-        
+
         <!-- Modal body -->
         <div class="modal-body">
-          Thanks for subcribing!
+          <!-- Thanks for subcribing! -->
+          {{ responseMsg }}
         </div>
-        
+
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn-popup" data-dismiss="modal">Close</button>
+          <button type="button" class="btn-popup" data-dismiss="modal">
+            Close
+          </button>
         </div>
-        
       </div>
     </div>
   </div>

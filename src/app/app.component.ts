@@ -10,8 +10,9 @@ declare const myDate: any;
 })
 export class AppComponent implements OnInit {
   title = 'ComingSoonApp';
-  showMsg: boolean = false;
+  showMsg: boolean = true;
   subscribeData: any = <any>{};
+  responseMsg: any;
 constructor(
     private subscribeService: SubscribeService
   ) { }
@@ -22,14 +23,24 @@ constructor(
       return;
     }
     this.subscribeService.subscribeToList(this.subscribeData)
-      .subscribe( res => {
-      this.showMsg = true;
+      .subscribe( data => {
+        if(data.result != 'error'){
+          console.log('success', data)
+          this.responseMsg = data.msg
+          // this.showMsg = true;
+        }
+        else{
+          console.log('oops', data);
+          // this.showMsg = false;
+          this.responseMsg = data.msg
+        }
       // .subscribe(res => {
         // alert('Subscribed!');
-      this.subscribeData = {};
-      }, err => {
-        console.log('err');
-        this.showMsg = false;
+        this.subscribeData = {};
+        error => console.log('fail', error)
+      // }, err => {
+      //   console.log('err');
+      //   this.showMsg = false;
       })
   }
   myDate = myDate()[0];

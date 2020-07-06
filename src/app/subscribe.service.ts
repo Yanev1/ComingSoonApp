@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable} from 'rxjs';
 
 
 @Injectable({
@@ -10,7 +11,8 @@ export class SubscribeService {
   constructor(
     private http: HttpClient
   ) { }
-  subscribeToList(data) {
+  // subscribeToList(data){
+  subscribeToList(data: any): Observable<any> {
     const params = new HttpParams()
       .set('EMAIL', data.email) //EMAIL is the property in Mailchimp and it has to be on all "input name" tags as well
       .set('group[15357][1]', 'true')
