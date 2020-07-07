@@ -4051,9 +4051,13 @@ b.light-color {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.alert{margin-bottom:20px;border:1px solid transparent;border-radius:4px}
-
-.alert-danger{color:#a94442;background-color:#f2dede;border-color:#ebccd1}
+.error{
+    color: red;
+    position: absolute;
+    top: 45px;
+    left: 25px;
+    font-size: x-small;
+}
 
 .btn-popup:hover{
     background: #247b38;

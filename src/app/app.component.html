@@ -38,12 +38,8 @@
                   placeholder="Enter your email"
                   [(ngModel)]="subscribeData.email"
                 />
-                <div
-                  [hidden]="email.valid || email.pristine"
-                  class="alert alert-danger">
-                  Required field.
-                </div>
                 <button
+                  (click)="emailCheck()"
                   class="submit-btn"
                   name="submit"
                   type="submit"
@@ -52,10 +48,12 @@
                 >
                   <b>SUBMIT</b>
                 </button>
+                <div [hidden]="email.valid || email.pristine" class="error">
+                  Required field.
+                </div>
               </form>
             </div>
             <!-- email-input-area -->
-
             <p class="post-desc">
               Sign up now to get early notification of the lauch date!
             </p>

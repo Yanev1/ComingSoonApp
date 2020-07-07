@@ -10,9 +10,20 @@ declare const myDate: any;
 })
 export class AppComponent implements OnInit {
   title = 'ComingSoonApp';
-  showMsg: boolean = true;
+  showMsg: boolean = false;
   subscribeData: any = <any>{};
   responseMsg: any;
+  pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+  emailCheck(){
+    if(this.subscribeData.email != '' && this.subscribeData.email != undefined){
+      if(this.subscribeData.email.match(this.pattern)) {
+        this.showMsg = true;
+      }else{this.showMsg = false;}
+    }else{
+      this.showMsg = false;
+    }
+  }
+
 constructor(
     private subscribeService: SubscribeService
   ) { }
@@ -27,21 +38,14 @@ constructor(
         if(data.result != 'error'){
           console.log('success', data)
           this.responseMsg = data.msg
-          // this.showMsg = true;
         }
         else{
           console.log('oops', data);
-          // this.showMsg = false;
           this.responseMsg = data.msg
         }
-      // .subscribe(res => {
-        // alert('Subscribed!');
-        this.subscribeData = {};
         error => console.log('fail', error)
-      // }, err => {
-      //   console.log('err');
-      //   this.showMsg = false;
       })
+      subscribeForm.reset();
   }
   myDate = myDate()[0];
   scnds = (myDate()[0] * 86400) - myDate()[1];
