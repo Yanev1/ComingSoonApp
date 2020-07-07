@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   showMsg: boolean = false;
   subscribeData: any = <any>{};
   responseMsg: any;
+  msgType: any;
   pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
   emailCheck(){
     if(this.subscribeData.email != '' && this.subscribeData.email != undefined){
@@ -37,11 +38,13 @@ constructor(
       .subscribe( data => {
         if(data.result != 'error'){
           console.log('success', data)
-          this.responseMsg = data.msg
+          this.responseMsg = data.msg;
+          this.msgType = 'Success'
         }
         else{
           console.log('oops', data);
           this.responseMsg = data.msg
+          this.msgType = 'Fail'
         }
         error => console.log('fail', error)
       })
