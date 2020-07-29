@@ -9,7 +9,7 @@ declare const myDate: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'ComingSoonApp';
+  title = 'Janev';
   showMsg: boolean = false;
   subscribeData: any = <any>{};
   responseMsg: any;
