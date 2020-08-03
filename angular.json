@@ -33,11 +33,11 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/custom.js",
               "src/assets/js/jquery.classycountdown.min.js",
               "src/assets/js/jquery.classycountdown.js",
               "src/assets/js/jquery.knob.js",
-              "src/assets/js/jquery.throttle.js"
+              "src/assets/js/jquery.throttle.js",
+              "src/assets/js/custom.js"
             ]
           },
           "configurations": {
