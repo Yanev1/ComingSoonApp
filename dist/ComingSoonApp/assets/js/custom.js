@@ -7,13 +7,13 @@ function myDate(){
   return [Result.toFixed(), toTheSecond];
 }
 
-$(document).ready(function() {
-          var remainingSec = $('.countdown').data('remaining-sec');
-          $('.countdown').ClassyCountdown({
-        theme: "flat-colors-very-wide",
-        end: $.now() + remainingSec
-    });
-    });
+// $(document).ready(function() {
+//           var remainingSec = $('.countdown').data('remaining-sec');
+//           $('.countdown').ClassyCountdown({
+//         theme: "flat-colors-very-wide",
+//         end: $.now() + remainingSec
+//     });
+//     });
  
 // $(function() {
 //     alert('Hello, custom js');
