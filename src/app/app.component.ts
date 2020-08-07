@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SubscribeService } from '../app/subscribe.service';
 
+declare var jquery:any;
+declare var $ :any;
 declare const myDate: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'Janev';
   showMsg: boolean = false;
   subscribeData: any = <any>{};
@@ -29,6 +31,15 @@ constructor(
     private subscribeService: SubscribeService
   ) { }
   ngOnInit() {
+    
+  }
+  ngAfterViewInit() {
+    const remainingSec = $('.countdown').data('remaining-sec');
+    
+    $('.countdown').ClassyCountdown({
+       theme: "flat-colors-very-wide",
+       end: $.now() + remainingSec
+    });
   }
   subscribe(subscribeForm: NgForm) {
     if (subscribeForm.invalid) {
