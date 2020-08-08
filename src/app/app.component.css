@@ -4032,7 +4032,9 @@ b.light-color {
     font-size: .9em;
     border-radius: 0 40px 40px 0;
     transition: all .3s;
-    background: #28a745;
+    /* background: #28a745; */
+    background: #66b644;
+    /* background: #74d14c; */
     color: #fff;
 }
 
