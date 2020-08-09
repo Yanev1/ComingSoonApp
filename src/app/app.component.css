@@ -3956,8 +3956,8 @@ b.light-color {
     left: 0; */
     /* width: 100%; */
     /* only required for <img /> */
-    /* width: 250px;
-    height: 80px; */
+    width: 150px;
+    height: 80px;
 }
 
 .left-section .logo {
@@ -4182,6 +4182,10 @@ b.light-color {
     #rounded-countdown {
         width: 100%;
     }
+    .dotted-line {
+        width: 150px;
+        height: 90px;
+    }
 }
 
 
@@ -4217,6 +4221,10 @@ b.light-color {
         height: 30px;
         line-height: 28px;
         width: 30px;
+    }
+    .dotted-line {
+        width: 150px;
+        height: 90px;
     }
     /* ---------------------------------
 	4. RIGHT SECTION
